@@ -1,6 +1,6 @@
 #include <avr/interrupt.h>
 #include <avr/io.h>
-/* We define in this line the frequency in wich the microcontroler will work, in this case it is 16MHz with the use of a crystal oscilator*/
+/* We define in this line the frequency in wich the microcontroler will work, in this case it is 16MHz with the use of a crystal oscillator*/
 #define F_CPU 16000000UL
 /*Contador will be used to generate the square wave to change the state of the led leituraADC is the value the adc returns and motor is the OCR2A value*/
 volatile unsigned char contador;

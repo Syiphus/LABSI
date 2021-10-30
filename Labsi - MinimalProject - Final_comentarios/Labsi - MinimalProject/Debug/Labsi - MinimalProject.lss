@@ -19,15 +19,15 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING
   7 .debug_abbrev 00000667  00000000  00000000  000009d3  2**0
                   CONTENTS, READONLY, DEBUGGING
-  8 .debug_line   000002cd  00000000  00000000  0000103a  2**0
+  8 .debug_line   000002ce  00000000  00000000  0000103a  2**0
                   CONTENTS, READONLY, DEBUGGING
   9 .debug_frame  000000bc  00000000  00000000  00001308  2**2
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_str    000003a2  00000000  00000000  000013c4  2**0
+ 10 .debug_str    000003ae  00000000  00000000  000013c4  2**0
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_loc    00000107  00000000  00000000  00001766  2**0
+ 11 .debug_loc    00000107  00000000  00000000  00001772  2**0
                   CONTENTS, READONLY, DEBUGGING
- 12 .debug_ranges 00000030  00000000  00000000  0000186d  2**0
+ 12 .debug_ranges 00000030  00000000  00000000  00001879  2**0
                   CONTENTS, READONLY, DEBUGGING
 
 Disassembly of section .text:
@@ -88,7 +88,7 @@ Disassembly of section .text:
   8c:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
 
 00000090 <init>:
-//#define DC(valor) (valor*1)		// velocidade do motor
+/*In this line we define the function ler_AD*/
 void ler_AD(void);
 
 void init(void){
@@ -103,11 +103,12 @@ void init(void){
   96:	8a b9       	out	0x0a, r24	; 10
 		PORTD= 255;
   98:	8b b9       	out	0x0b, r24	; 11
+		/*PORTC is used to read the values of the ADC so it is initialized as input*/
 		DDRC = 0b00000000;
   9a:	17 b8       	out	0x07, r1	; 7
 		PORTC = 0b00000000;
   9c:	18 b8       	out	0x08, r1	; 8
-		/*Here we initialize the Timer/Counter 0 with a prescaler of 1024 giving us a time of 1ms*/
+		/*Here we initialize the Timer/Counter 0 in compare mode with a prescaler of 128*/
 		OCR0A = 77;
   9e:	8d e4       	ldi	r24, 0x4D	; 77
   a0:	87 bd       	out	0x27, r24	; 39
@@ -120,8 +121,8 @@ void init(void){
 		TIMSK0 = 0b00000010;
   aa:	82 e0       	ldi	r24, 0x02	; 2
   ac:	80 93 6e 00 	sts	0x006E, r24	; 0x80006e <__TEXT_REGION_LENGTH__+0x7f806e>
-		/*OCR2 is where we give the microcontroler the information of the speed we want it to operate in, we forced it to start turned off,
-		this uses the Timer/Counter 2 so we also initialized it TC2 witch a prescaler of 64 mode 1 and phase correct*/
+		/*OCR2 is where we give the microcontroler the information of the speed we want it to operate in,
+		this uses the Timer/Counter 2 so we also initialized it TC2 witch a prescaler of 128 in Fast PWM*/
 		TCCR2A = 0b10000011;
   b0:	93 e8       	ldi	r25, 0x83	; 131
   b2:	90 93 b0 00 	sts	0x00B0, r25	; 0x8000b0 <__TEXT_REGION_LENGTH__+0x7f80b0>
@@ -130,11 +131,10 @@ void init(void){
   b8:	90 93 b1 00 	sts	0x00B1, r25	; 0x8000b1 <__TEXT_REGION_LENGTH__+0x7f80b1>
 		TIMSK2 = 0b00000010;
   bc:	80 93 70 00 	sts	0x0070, r24	; 0x800070 <__TEXT_REGION_LENGTH__+0x7f8070>
-		//OCR2A = 50;
+		/*The ADC converter wich will be used is the ADC1 and a division factor of 64*/
 		ADMUX =  0b00100001;
   c0:	81 e2       	ldi	r24, 0x21	; 33
   c2:	80 93 7c 00 	sts	0x007C, r24	; 0x80007c <__TEXT_REGION_LENGTH__+0x7f807c>
-		
 		ADCSRA = 0b10000110;
   c6:	86 e8       	ldi	r24, 0x86	; 134
   c8:	80 93 7a 00 	sts	0x007A, r24	; 0x80007a <__TEXT_REGION_LENGTH__+0x7f807a>
@@ -145,7 +145,8 @@ void init(void){
 
 000000d0 <__vector_14>:
 }
-
+/*This is the Timer/Counter 0 interrupt where the timer of 5ms will be incremented to 100 (0.5s)
+and it will check the value of the port in witch the LED is located and will alternate its value*/
 ISR(TIMER0_COMPA_vect)
 {
   d0:	1f 92       	push	r1
@@ -183,9 +184,9 @@ ISR(TIMER0_COMPA_vect)
  10a:	18 95       	reti
 
 0000010c <main>:
-}
 
-
+/*Program will start here this function will call the init() and will then be in an infinite loop
+the program execution will be based on the Timer/Counter */
 int main(void)
 {
 	init();
@@ -193,31 +194,31 @@ int main(void)
  110:	ff cf       	rjmp	.-2      	; 0x110 <main+0x4>
 
 00000112 <ler_AD>:
-		//OCR2A = 100;
+    {
     }
 }
 
 void ler_AD(void){
-	ADCSRA |= (1<<6);  // inivia leitura adc
+	ADCSRA |= (1<<6);  /*Starts reading the ADC*/
  112:	ea e7       	ldi	r30, 0x7A	; 122
  114:	f0 e0       	ldi	r31, 0x00	; 0
  116:	80 81       	ld	r24, Z
  118:	80 64       	ori	r24, 0x40	; 64
  11a:	80 83       	st	Z, r24
-	while ((ADCSRA & (1<<6)) != 0); // espera que a leitura termine
+	while ((ADCSRA & (1<<6)) != 0); /*Waits for the ADC to finish reading*/
  11c:	80 91 7a 00 	lds	r24, 0x007A	; 0x80007a <__TEXT_REGION_LENGTH__+0x7f807a>
  120:	86 fd       	sbrc	r24, 6
  122:	fc cf       	rjmp	.-8      	; 0x11c <ler_AD+0xa>
-	motor = ADCH; // guarda leitura
+	motor = ADCH; /*Stores the value of the ADCH ( Results are fixed at the left ) */
  124:	80 91 79 00 	lds	r24, 0x0079	; 0x800079 <__TEXT_REGION_LENGTH__+0x7f8079>
  128:	80 93 00 01 	sts	0x0100, r24	; 0x800100 <__DATA_REGION_ORIGIN__>
  12c:	08 95       	ret
 
 0000012e <__vector_7>:
-		else PORTD = 0;
-		contador= 0;  //resets the timer
 	}
 }
+/*This is the Timer/Counter 2 interrupt where it will check the value of the ADC [0;255] and will
+atribute the value to OCR2A changing the speed of the motor*/
 ISR(TIMER2_COMPA_vect)
 {
  12e:	1f 92       	push	r1
