@@ -4,7 +4,6 @@
 #define F_CPU 16000000UL
 /*Contador will be used to generate the square wave to change the state of the led leituraADC is the value the adc returns and motor is the OCR2A value*/
 volatile unsigned char contador;
-volatile unsigned char leituraADC = 0;
 volatile unsigned char motor = 0;
 
 /*In this line we define the function ler_AD*/
