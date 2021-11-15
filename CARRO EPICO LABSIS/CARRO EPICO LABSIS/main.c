@@ -27,7 +27,7 @@ void init(void){
     OCR0A = 77;
     TCCR0A |= (1 << COM0A1) | (1 << COM0A0) | (1 << WGM01);
     TCCR0B |= (1 << FOC0A)  |  (1 << CS02)  | (1 << CS00);
-  TIMSK0 |= (1 << OCIE0A);
+    TIMSK0 |= (1 << OCIE0A);
   
 
     
