@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<!--
+	Canvas by TEMPLATE STOCK
+	templatestock.co @templatestock
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Relatório Labsis">
+    <meta name="author" content="Diogo Moreira, Rui Teixeira">
+    <title>Relatório LABSIS</title>
+    <link rel="icon" href="img/isep.png">
+    <!-- =============== Bootstrap Core CSS =============== -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <!-- =============== Google fonts =============== -->
+    <link href='https://fonts.googleapis.com/css?family=Oswald:400,300' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
+	<!-- =============== fonts awesome =============== -->
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <!-- =============== Plugin CSS =============== -->
+    <link rel="stylesheet" href="css/animate.min.css" type="text/css">
+    <!-- =============== Custom CSS =============== -->
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <!-- =============== Owl Carousel Assets =============== -->
+    <link href="owl-carousel/owl.carousel.css" rel="stylesheet">
+    <link href="owl-carousel/owl.theme.css" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <!-- =============== Preloader =============== -->
+    <div id="preloader">
+        <div id="loading">
+        </div>
+    </div>
+    <!-- =============== nav =============== -->
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="https://www.isep.ipp.pt/" target="_blank"><img src="img/Isep-logo.png" alt="Logo">
+                    </a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a class="page-scroll" href="#about">Introdução</a>
+                        </li>
+                        <li>
+                            <a class="page-scroll" href="#arquitetura">Arquitetura</a>
+                        </li>
+                        <li>
+                            <a class="page-scroll" href="#hardware">Hardware</a>
+                        </li>
+                        <li>
+                            <a class="page-scroll" href="#software">Software</a>
+                        </li>
+                        <li> 
+                            <a class="page-scroll" href="#resultados">Resultados</a>
+                        </li>
+                        <li>
+                            <a class="page-scroll" href="#conclusoes">Conclusões</a>
+                        </li>
+                        <li>
+                            <a class="page-scroll" href="#referencias">Referências</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- =============== navbar-collapse =============== -->
+
+            </div>
+        </div>
+        <!-- =============== container-fluid =============== -->
+    </nav>
+    <!-- =============== header =============== -->
+    <header>
+		<!-- =============== container =============== -->
+        <div class="container">
+            <div class="header-content row">
+                <div class="col-xs-12 col-sm-5 col-md-5">
+                    <h2 class="wow bounceIn animated" data-wow-delay=".40s" color="#000000">VEÍCULO AUTÓNOMO (AGV)</h2>
+                    <h3 class="wow bounceIn animated" data-wow-delay=".50s">LABSIS - Departamento de Engenharia Eletrotécnica</h3>
+                    <p class="wow bounceIn animated" data-wow-delay=".60s">Diogo Moreira (1190528)     1190528@isep.ipp.pt</p>
+                    <p class="wow bounceIn animated" data-wow-delay=".60s">Rui Teixeira (1191039)      1191039@isep.ipp.pt</p>
+                </div>
+                <div class="col-xs-12 col-sm-7 col-md-7 wow slideInLeft animated">
+                    <img src="img/carro.jpg" alt="car" />
+                </div>
+            </div>
+        </div>
+		<!-- =============== container end =============== -->
+    </header>
+    <!-- =============== About =============== -->
+    <section id="about" class="">
+		<!-- =============== container =============== -->
+        <div class="container">
+            <span class="angle2"></span>
+            <span class="angle"></span>
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 wow fadeInLeft animated" data-wow-delay=".5s">
+                    <h1 class="centor"><span>Introdução</span>       
+                  </div>
+                  <div class="col-xs-12 col-sm-12 col-md-12 wow fadeInRight animated" data-wow-delay=".5s">
+                    <p class="centro"> Na Unidade Curricular de Laboratório de Sistemas foi-nos proposto o desenvolvimento de 
+                        um projeto, tendo escolhido para tal, a criação de um AGV (Automated Guided Vehicle), que tem como objetivo
+                         seguir uma determinada cor com recurso a um sensor de infra-vermelhos.
+                        Um AGV trata-se de um veículo autónomo, sem operador, que percorre uma rota definida,
+                         utilizando tecnologia de navegação para se orientar no espaço[1].
+                        AGV’s são progressivamente mais utilizados na indústria para o transporte de materiais e apoio à
+                         produção. A flexibilidade e rentabilidade apresentadas por estes veículos autónomos são bastante 
+                         apreciadas pelas fábricas, pois a logística de transporte de materiais dentro das mesmas exige um
+                          elevado tráfego de transportadoras e empilhadoras, o que se revela uma solução dispendiosa quando
+                           confrontada com a utilização de AGV’s[2] .
+                    
+                    <p class="centro">Assim, o nosso trabalho teve por objetivo desenvolver hardware e software para um
+                        carro autónomo que segue uma linha preta recorrendo a sensores infravermelhos. Pretendemos criar um AGV que
+                        simulasse um carro normal, tendo assim tração traseira e direção à frente, imprimimos o seu modelo em 3D[3]
+                        e tentamos que este fosse mais robusto e se adequasse a vários cenários aproximando-o de um todo-o-terreno.
+                  </div>     
+            </div>
+        
+        </div>
+
+
+        <div class="container">
+            <span class="angle2"></span>
+            <span class="angle"></span>
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-20 wow fadeInLeft animated centor" data-wow-delay=".5s">
+                    <h2><span>Estado de Arte</span>       
+                  </div>
+                  <div class="col-xs-12 col-sm-12 col-md-20 wow fadeInRight animated centor" text-align = "center" data-wow-delay=".5s"> 
+                   
+                    <p class="centro">De forma a estudar os componentes que achavamos necessários para o nosso trabalho assim como para entender qual era a posição deste no mundo.
+                        <br><br>
+                        <h4 class="centro">AVG filo guiados</h4> 
+                        
+                    <p class="centro"> Nos veículos autónomos filo guiados, a rota é definida por meio de trilhos, linhas 
+                        magnéticas ou cabos, cuja instalação requer a realização de obras no local e são pouco flexíveis 
+                        no que toca à alteração das rotas[1]. 
+                        No caso dos AGV que utilizam fitas magnéticas, são usados sensores magnéticos para 
+                        detetar uma banda magnética que pode ser embutida no chão. Estas apresentam a vantagem de 
+                        não ser necessário qualquer tipo de alimentação ou sinal. Outra vantagem é a dupla polaridade da 
+                        banda, permitindo utilizar pequenos pedaços da fita magnética para fornecer sinais ao AGV 
+                        consoante a polaridade e a sequência em que são dispostas.
+                        <br><br>
+                        
+                    <h4 class="centro"> Laser</h4>
+                        <p class="centro">Veículos autónomos guiados por laser são bastante utilizados na indústria devido à sua 
+                        precisão de posicionamento, empilhadoras automáticas em armazéns são exemplos de uma 
+                        aplicação deste tipo de sensor em um AGV.
+                        O ambiente onde este tipo de veículo é colocado possui refletores em pontos chave e com 
+                        recurso a um laser que emite em 360º este consegue sempre saber onde se encontra e a que 
+                        distância está dos pontos, por este motivo é um sistema muito preciso e que precisa de pouca 
+                        manutenção. Na indústria dependendo do tipo de laser usado o veículo consegue calcular e 
+                        corrigir o seu posicionamento entre 30 a 40 vezes por segundo[4].
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        
+                        <img src="img/filo.png" alt="laser"  align="center" width="400" height="300" class="centre"/>
+                        <figcaption><font face="Times" color="#000000">  
+                            <br>
+                            <p class="centor"> <b>Figura 1 &#45; Sistema de navegação por Laser. </b></font></figcaption>
+                            <br><br>
+
+                        <h4 class="centro"> Câmara (navegação ótica) </h4>
+                        <p class="centro"> Este tipo de AGV possui uma grande versatilidade pois com recurso a camaras e
+                            algoritmos avançados podem reconhecer objetos, pessoas e em casos mais simples códigos QR. 
+                            Por essa razão é um sistema viável para a IOT[5].
+                            <br>
+                            <br>
+                            <img src="img/camara.png" alt="laser" width="400" height="300" class="centre"/>
+                            <br>
+                            <figcaption><font face="Times" color="#000000"> 
+                            <p class="centor"> <b>Figura 2 &#45; Sistema de navegação por Câmara. </b></font></figcaption>
+                                <br><br>
+
+                    <h4 class="centro">GPS</h4>
+                     <p class="centro">Veículos com recuso a GPS têm uma 
+                        maior liberdade pois não precisam de seguir linhas então podem tomar percursos que previamente 
+                        não existiam no espaço, também não existe o risco de o controlo do percurso se desgastar.
+                        Veículos deste tipo podem ser usados na indústria, mas também para serviços de entrega 
+                        por exemplo[6].
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        
+                    <img src="img/gps.png" alt="laser" width="400" height="300" class="centre"/>
+                    <br>
+                    <figcaption><font face="Times" color="#000000"> 
+                    <p class="centor"> <b>Figura 3 &#45; Sistema de navegação por GPS. </b></font></figcaption>
+                        <br><br>
+                </div>     
+            </div>
+        </div>   
+		<!-- =============== container end =============== -->		
+    </section>
+    <!-- =============== how it works =============== -->
+    <section id="arquitetura" class="parallax">
+	<!-- =============== container =============== -->
+    <div class="container">
+     <span class="angle2"></span>
+    <span class="angle"></span>
+     <div class="row">
+
+       <div class="col-xs-12 col-sm-12 col-md-12 wow bounceIn animated headding" data-wow-delay=".5s">
+        <br>   
+        <br>
+        <br>
+        <h2>&nbsp;   Arquitetura</h2>
+        <p class ="centro">O AGV foi desenhado de forma a seguir um caminho predefinido (Linha chão), nesta parte do relatório mostramos 
+            a sua arquitetura através de um diagrama de blocos. O ATmega328p é responsavel por todas as operações lógicas
+            e através de código decide a direção do carro (mudando o valor de PWM em OCR1A - Porta digital 9), se este está
+            parado ou a andar, e a velocidade dos motores (PWM em OCR2A E OCR2B). Este também através de um contador e do 
+            Timer/counter 0 faz com que um LED pisque a 1Hz e liga e desliga luzes conforme um LDR.
+        </div>
+        <img src="img/blocos.png" alt="blocos" class="centrar" />
+        <br>
+        <figcaption><font face="Times" color="#000000"> 
+            <p class="centor"> <b>Figura 4 &#45; Diagrama de Blocos AGV. </b></font></figcaption>
+                <br><br>
+        <br>
+        <br><br>
+        <br>
+        <br>
+
+	<!-- =============== container end =============== -->	
+    </section>
+    <section id="hardware" class="parallax">
+        <!-- =============== container =============== -->
+        <div class="container">
+         <span class="angle2"></span>
+        <span class="angle"></span>
+         <div class="row">
+    
+            <div class="col-xs-12 col-sm-12 col-md-20 wow fadeInRight animated centor" data-wow-delay=".5s"> 
+            <br>   
+            <br>
+            <br>
+            <h2>&nbsp;   Hardware</h2>
+            <div class="col-xs-12 col-sm-12 col-md-20 wow fadeInRight animated centor" data-wow-delay=".5s"> 
+           <h4> <p> Nesta parte do relatório apresentamos o hardware que foi utilizado no nosso projeto.</h4>
+            </div>
+            <br>
+            <br>
+            <h3><b><p class="centro"> Microcontrolador</b></h3>
+                <p class="centro"> Por ser um microcontrolador que já tínhamos e estávamos familiarizados a usar escolhemos o ATmega328p, 
+                    para tornar a sua programação mais fácil foi usada a verão deste que se encontra ligada ao arduino, não 
+                    foram utilizadas bibliotecas de arduino apenas o seu hardware. Este funciona a uma frequência de 16MHz 
+                    devido à existência do oscilador de cristal presente no arduino[7], consideramos ser um microcontrolador que 
+                    se adequava aos nossos objetivos devido à sua rapidez assim como os 8 bits existentes nele serem suficientes. 
+            <img src="./img/ino.png" alt="blocos" align="center" height="500" width="1000" class="centre"/>
+            <br>
+           
+            <figcaption><font face="Times" color="#000000">  
+            <p class="centor"> <b>Figura 5 &#45; Pinout do ATmega 328p com portas do Arduino. </b></font></figcaption>
+                <br>
+                <br>
+                <h3><b><p class="centro"> Motor DC</b></h3>
+            <p class="centro"> São usados 2 motores DC para fazer o carro movimentar, este tem tração traseira e
+                estes são alimentados com 12 Volts e a sua velocidade é controlada por PWM[8].
+            <img src="./img/motor.jpg" alt="blocos" align="center" height="350" width="350" class="centre"/>
+            <figcaption><font face="Times" color="#000000">  
+                <p class="centor"> <b>Figura 6 &#45; Motor DC. </b></font></figcaption>
+            <br>
+            <h3><b><p class="centro"> Motor Driver L298N</b></h3>
+                <br>
+            <p class="centro"> É um módulo constituído pelo driver L298N, de dupla ponte H, capaz de controlar 2 motores DC ou
+                 um motor stepper bidirecional. Por possuir um regulador de tensão interno, quando alimentado até 12V, este 
+                 regulador alimenta os circuitos lógicos internos, permitindo um output de 5V para outras funções[9].
+                 <br>
+                 <br>
+            <img src="./img/ponteh.webp" alt="blocos" align="center" height="350" width="350" class="centre"/>
+            <figcaption><font face="Times" color="#000000">  
+                <p class="centor"> <b>Figura 7 &#45; Motor Driver L298N. </b></font></figcaption>
+            <br>
+            <h3><b><p class="centro"> Sensores IR</b></h3>
+            <p class="centro"> Usamos dois sensores IR TCRT5000 para controlar o carro, estes têm um pin analogico que não é usado
+                e os valores são registados usando a sua porta digital que fica a 0 quando este está a detetar um objeto e a 1 quando
+                nenhum objeto é detetado[10].
+            <br>
+            <br>
+            <img src="./img/irsensor.webp" alt="blocos" align="center" height="350" width="400" class="centre"/>
+            <br>
+            <figcaption><font face="Times" color="#000000">  
+                
+                <p class="centor"> <b>Figura 8 &#45; Sensor IR TCRT5000. </b></font></figcaption>
+            <br>
+            
+            <br>
+            <h3><b><p class="centro"> Motor Servo SG90 </b></h3>
+            <p class="centro"> Escolhemos este motor devido à sua capacidade de virar 180º, colocando-o no centro
+                este consegue ser usado para virar para a esquerda/direita 90º. O motor é controlado por um PWM que varia entre
+                1ms e 2 ms, sendo que se encontra no meio quando o tempo ativo é de 1.5ms[11].
+            <img src="./img/servo.jpg" alt="blocos" align="center" height="350" width="450" class="centre"/>
+            <figcaption><font face="Times" color="#000000">  
+                <p class="centor"> <b>Figura 9 &#45; Motor Servo SG90. </b></font></figcaption>
+            <br>
+            <br>
+            <h3><b><p class="centro"> Amplificador de Instrumentação INA128P </b></h3>
+                
+                <p class="centro"> Os INA128P são amplificadores de instrumentação de alta precisão e baixa potência.
+                     Admite uma elevada gama de tensões de alimentação e permite ganhos entre 1 e 10000[12].
+                <br>
+                <br>
+                <br>
+                <img src="./img/ampop.png" alt="blocos" align="center" height="350" width="450" class="centre"/>
+                <figcaption><font face="Times" color="#000000">  
+                    <p class="centor"> <b>Figura 10 &#45; INA128P. </b></font></figcaption>
+            <br>
+            <h3><b><p class="centro"> Regulador de Tensão LM7805 </b></h3>
+                
+                <p class="centro"> O LM7805 é um IC capaz de converter tensões entre 7V e 25V numa tensão fixa de 5V. 
+                    É escolhido devido ao seu baixo custo e versatilidade[13].
+                <br>
+                <br>
+                <br>
+                <img src="./img/regulador.png" alt="blocos" align="center" height="350" width="450" class="centre"/>
+                <figcaption><font face="Times" color="#000000">  
+                    <p class="centor"> <b>Figura 11 &#45; LM7805. </b></font></figcaption>
+            <br>
+            <br>
+            <h3><b><p class="centro"> Light Dependent Resistor </b></h3>
+                
+                <p class="centro"> É utilizado um LDR de forma a obter a iluminação da área, O sinal adquirido é
+                     posteriormente linearizado e amplificado com recurso a uma ponte de Wheatstone e um Amplificador de Instrumentação.
+                <br>
+                <br>
+                <br>
+                <img src="./img/ldr.png" alt="blocos" align="center" height="400" width="450" class="centre"/>
+                <figcaption><font face="Times" color="#000000">  
+                    <p class="centor"> <b>Figura 12 &#45; LDR. </b></font></figcaption>
+            <br>
+            <br>
+            <h3><b><p class="centro"> LED </b></h3>
+                
+                <p class="centro"> Usamos um LED no circuito de forma a mostrar um timer de 1Hz.
+                <br>
+                <br>
+                <br>
+                <img src="./img/led.png" alt="blocos" align="center" height="350" width="470" class="centre"/>
+                <figcaption><font face="Times" color="#000000">  
+                    <p class="centor"> <b>Figura 13 &#45; LED. </b></font></figcaption>
+            <br>
+            <br>
+            <h3><b><p class="centro"> Esquema Elétrico </b></h3>
+                
+                <p class="centro"> Encontra-se aqui o esquema elétrico do circuito.
+                <br>
+                <br>
+                <br>
+                <img src="./img/eletrico.png" alt="blocos" align="center" height="550" width="900" class="centre"/>
+                <figcaption><font face="Times" color="#000000">  
+                    <p class="centor"> <b>Figura 14 &#45; Circuito Elétrico. </b></font></figcaption>
+            <br>
+            <br>
+            <h3><b><p class="centro"> PCB </b></h3>
+                
+                <p class="centro"> Desenhamos um PCB de forma a tonar o circuito mais compacto. Este foi desenhado no Kicad.
+                <br>
+                <br>
+                <br>
+                <img src="./img/pcb.png" alt="blocos" align="center" height="550" width="1200" class="centre"/>
+                <figcaption><font face="Times" color="#000000">  
+                    <p class="centor"> <b>Figuras 15,16,17  &#45; Esquema Elétrico, Vista Frontal, Vista Traseira. </b></font></figcaption>
+            <br>
+            <br><br>
+            <br>
+            
+            <br><br>
+            <br>
+            <br>
+    
+        <!-- =============== container end =============== -->	
+        </section>
+        <section id="software" class="parallax">
+            <!-- =============== container =============== -->
+            <div class="container">
+             <span class="angle2"></span>
+            <span class="angle"></span>
+             <div class="row">
+        
+                <div class="col-xs-12 col-sm-12 col-md-20 wow fadeInRight animated centor" data-wow-delay=".5s"> 
+                <br>   
+                <br>
+                <br>
+                <h2>&nbsp;   Software</h2>
+                <div class="col-xs-12 col-sm-12 col-md-20 wow fadeInRight animated centor" data-wow-delay=".5s"> 
+               <h4> <p> Nesta parte do relatório apresentamos o software que foi utilizado para controlar o AGV.</h4>
+                </div>
+                <br>
+                <br>
+                <h3><b><p class="centro"> Variáveis globais</b></h3>
+                    <p class="centro"> Para tornar a interpretação do código foram criadas algumas variáveis globais
+                        assim como dado nome a portas de modo a tornar o código de mais simples leitura assim como permitir
+                        uma maior facilidade de programação. São também incluídas bibliotecas assim como definida a frequência do CPU.
+                        As variáveis direita, esquerda e centro dão-nos os intervalos apróximados tempo para o servo, 1ms, 1.5ms, 2ms respetivamente,
+                        estes não são o valor exato de modo a não exercer força a mais no servo por causa da direção evitando assim que o mesmo se estrague.
+                        <br>
+                        <br>
+                <img src="./img/variaveis.png" alt="blocos" align="center" width = "600" class="centre"/>
+                <br>
+               
+                <figcaption><font face="Times" color="#000000">  
+                <p class="centor"> <b>Figura 18 &#45; Variáveis Globais. </b></font></figcaption>
+                <br>
+                <h3><b><p class="centro"> Inicializações</b></h3>
+                    <br>
+                <p class="centro"> São usadas inicializações para definir portas como entrada/saida assim como
+                    definir as frequencias dos timer/counter e efetuar as configurações dos mesmos.
+                    <br>
+                    <br>
+                <img src="./img/init1.png" alt="blocos" align="center" width = "500" class="centre"/>
+                <figcaption><font face="Times" color="#000000">  
+                <p class="centor"> <b>Figura 19 &#45; Portas PWM para motores e portas dos sensores IR. </b></font></figcaption>
+                <br>
+                <p class="centro"> O Timer/Counter 0 foi inicializado em modo CTC e com um prescaler de 1024. O Timer/Counter 2
+                    foi inicializado em modo Fast PWM com um prescaler de 1024. Por fim, o Timer/Counter 1 foi inicializado em modo Fast PWM
+                    com TOP em ICR1 e um prescaler de 1024.
+                    <br>
+                    <br>
+                <img src="./img/init2.png" alt="blocos" align="center" width = "500" class="centre"/>
+
+
+                    <br>
+                <figcaption><font face="Times" color="#000000">  
+                <p class="centor"> <b>Figura 20 &#45; Configuração dos Timer/Counter assim como definição da porta do servo e ADC. </b></font></figcaption>
+                <br>
+                <img src="./img/init3.png" alt="blocos" align="center" width = "230" class="centre"/>
+                <br>
+                <figcaption><font face="Times" color="#000000">  
+                <p class="centor"> <b>Figura 21 &#45; Atribuição do estado inicial do carro assim como ativação dos interrupts. </b></font></figcaption>
+                <br>
+                <h3><b><p class="centro"> Funções</b></h3>
+                    <p class="centro"> Nesta parte mostramos as funções do código e na legenda é possível ver o que cada uma faz.
+                        <br>
+                <br>
+                <img src="./img/funcao1.png" alt="blocos" align="center" width = "270" class="centre"/>
+                <br>
+                <figcaption><font face="Times" color="#000000">  
+                <p class="centor"> <b>Figura 22 &#45; Estados dos motores assim como direção do servo. </b></font></figcaption>
+                <br>
+                <br>
+                <img src="./img/funcao2.png" alt="blocos" align="center" width = "500" height = "100" class="centre"/>
+                <figcaption><font face="Times" color="#000000">  
+                <p class="centor"> <b>Figura 23&#45; Leitura do ADC. </b></font></figcaption>
+                <br>
+                <br>
+                <h4><b><p class="centro"> Estado da Maquina</b></h4>
+                    <img src="./img/flowchart3.png" alt="blocos" align="center" width = "550" height = "500" class="centre"/>
+                <figcaption><font face="Times" color="#000000">  
+                <p class="centor"> <b>Figura 24 &#45; Fluxograma estado da maquina. </b></font></figcaption>
+                <img src="./img/funcao3.png" alt="blocos" align="center" width = "500" height = "500" class="centre"/>
+                <figcaption><font face="Times" color="#000000">  
+                <p class="centor"> <b>Figura 25 &#45; Estado da máquina. </b></font></figcaption>
+                
+                <br>
+                <h4><b><p class="centro"> Função Main</b></h4>
+                    <img src="./img/flowchart1.png" alt="blocos" align="center" width = "200" height = "400" class="centre"/>
+                <figcaption><font face="Times" color="#000000">  
+                <p class="centor"> <b>Figura 26 &#45; Fluxograma Main. </b></font></figcaption>
+                <img src="./img/funcao4.png" alt="blocos" align="center" width = "200" height = "100" class="centre"/>
+                <figcaption><font face="Times" color="#000000">  
+                <p class="centor"> <b>Figura 27 &#45; Função Main. </b></font></figcaption>
+                
+                <br>
+                <h3><b><p class="centro"> Interrupções
+                </b></h3>
+                <img src="./img/flowchart2.png" alt="blocos" align="center" width = "300" height = "500" class="centre"/>
+                <figcaption><font face="Times" color="#000000">  
+                <p class="centor"> <b>Figura 28 &#45; Fluxograma Timer 0. </b></font></figcaption>
+                    <br>
+
+                <img src="./img/interrupts.png" alt="blocos" align="center" width = "400" height = "300" class="centre"/>
+                <figcaption><font face="Times" color="#000000">  
+                <p class="centor"> <b>Figura 29 &#45; Interrupções. </b></font></figcaption>
+                <br><br>
+                <br>
+                <br>
+            </section>
+            <section id="resultados" class="parallax">
+                <!-- =============== container =============== -->
+                <div class="container">
+                 <span class="angle2"></span>
+                <span class="angle"></span>
+                 <div class="row">
+            
+                    <div class="col-xs-12 col-sm-12 col-md-20 wow fadeInRight animated centro" data-wow-delay=".5s"> 
+                    <br>   
+                    <br>
+                    <br>
+                    <h2 class = "centor">&nbsp;   Resultados</h2>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-20 wow fadeInRight animated centro" data-wow-delay=".5s"> 
+                   <h4 class = "centor"> <p> Aqui mostramos os resultados e discutimos os mesmos.</h4>
+                <br><br>
+                </div>
+                <div class="video-slider centre">
+                   
+                    <!-- SLIDE 1 -->
+                    <div class="slide" class = "centre">
+                        <video class="slider-video">
+                            <source src="./video/video3.mp4" type="video/mp4">
+                        </video>
+                        <div class="overlay-content">
+                            <div class="play-button"></div>
+                        </div>
+                    </div>
+                    <!-- SLIDE 2 -->
+                    <div class="slide" class = "centre">
+                        <video class="slider-video" width="800" height="400">
+                            <source src="./video/video2.mp4" type="video/mp4">
+                            
+                        </video>
+                        <div class="overlay-content">
+                            <div class="play-button"></div>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <video class="slider-video">
+                            <source src="./video/video1.mp4" type="video/mp4">
+                            
+                        </video>
+                        <div class="overlay-content">
+                            <div class="play-button"></div>
+                        </div>
+                    </div>
+                    <!-- END OF SLIDES -->
+                    <div class="slide-arrow left"></div>
+                    <div class="slide-arrow right"></div>
+                    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+                    <script>
+                        $('.play-button').on('click', function () {
+                            $(this).hide();
+                            $(this).parent().fadeOut();
+                            $(this).parent().siblings('.slider-video')[0].play();
+                        });
+                        
+                        $('.slider-video').on('play', function () {
+                            $(this).attr('controls', '1');
+                        });
+                        
+                        // Additionnal code for the slider
+                        var pos = 0,
+                            slides = $('.slide'),
+                            numOfSlides = slides.length;
+                        
+                        function nextSlide(){
+                            stopCurrentVideo();
+                            slides.eq(pos).animate({left:'-100%'},500);
+                            pos = pos >= numOfSlides-1 ? 0 : ++pos;
+                            slides.eq(pos).css({left:'100%'}).animate({left:0},500);
+                        }
+                        
+                        function previousSlide(){
+                            stopCurrentVideo();
+                            slides.eq(pos).animate({left:'100%'},500);
+                            pos = pos == 0 ? numOfSlides-1 : --pos;
+                            slides.eq(pos).css({left:'-100%'}).animate({left:0},500);
+                        }
+                        
+                        function stopCurrentVideo(){
+                            $('.slider-video:eq('+pos+')').load().removeAttr('controls')
+                            .siblings('.overlay-content').show().find('.play-button').show();
+                        }
+                        
+                        $('.left').click(previousSlide);
+                        $('.right').click(nextSlide);</script>
+                </div>
+                <br>
+                <br>
+                <p class="centro"> Como é observado no vídeo o AGV consegue seguir a linha no chão, este não segue uma rota constante devido
+                     à existência de apenas 2 sensores,
+                    isso faz com que por vezes o mesmo saia da linha e ande na direção que teve na última vez que virou até que a 
+                    encontre de novo.
+                    O nosso veículo está desenhado para ser um "todo-o-terreno", e tem facilidade em seguir percursos com mais atrito
+                     e algumas elevações como pode ser
+                    visto no video. Isto pode ser útil para situações em que chegar ao destino é mais importante que seguir um percurso.
+                <br>   
+                <br>
+                <br>                   
+                <br>   
+                <br>
+                <br>
+ 
+                    <br>
+            <!-- =============== container end =============== -->	
+            </section>
+            <section id="conclusoes" class="parallax">
+                <!-- =============== container =============== -->
+                <div class="container">
+                 <span class="angle2"></span>
+                <span class="angle"></span>
+                 <div class="row">
+            
+                    <div class="col-xs-12 col-sm-12 col-md-20 wow fadeInRight animated centro" data-wow-delay=".5s"> 
+                    <br>   
+                    <br>
+                    <br>
+                    <h2 class = "centor">&nbsp;   Conclusões</h2>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-20 wow fadeInRight animated centro" data-wow-delay=".5s"> 
+                <br>
+                <p class="centro"> O objetivo principal era de que o veículo conseguisse seguir a linha e este foi cumprido.
+                    Foi-nos possível obter competências novas, nomeadamente no desenho de PCB, modelação 3D assim como
+                    o desenvolvimento de já existentes como a programação de microcontroladores. 
+                    Algumas barreiras que nos apareceram foram o custo ou a falta de hardware assim 
+                    como a dificuldade em ter um ambiente de teste para o projeto, usamos apenas 2 sensores,
+                    porém, estão instalados 3 no AGV isto deve-se ao facto de o 3.º não ter um modo de calibração
+                    o que tirou a sua utilidade, pois na pista que usamos para testar este estava sempre ativo não sendo útil.
+                    O projeto tem espaço para melhoramento e a troca do sensor do meio tornava o controlo mais fácil, visto
+                    ser desenhado como um todo-o-terreno um sonar também podia ser útil para desviar de possíveis objetos 
+                    que apresentassem um obstáculo ao AGV.
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+
+                </div>
+            </section>
+            <section id="referencias" class="parallax">
+                <!-- =============== container =============== -->
+                <div class="container">
+                 <span class="angle2"></span>
+                <span class="angle"></span>
+                 <div class="row">
+            
+                    <div class="col-xs-12 col-sm-12 col-md-20 wow fadeInRight animated centro" data-wow-delay=".5s"> 
+                    <br>   
+                    <br>
+                    <br>
+                    <h2 class = "centor">&nbsp;   Referências</h2>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-20 wow fadeInRight animated centro" data-wow-delay=".5s"> 
+                <br><br>    
+
+                <ol>
+                    <li>“Que AGV escolher? - Buying Guides DirectIndustry.” 
+                       <a href="https://guide.directindustry.com/pt/que-agv-escolher/" target="_blank"> https://guide.directindustry.com/pt/que-agv-escolher/ (accessed Nov. 12, 2021).</a></li>
+                    <li>A. E. Santos, “Logística baseada em AGVs,” 2013.</li>
+                    <li>2WD RC Smart Car Chassis for Arduino by majolar. (2022). Retrieved 22 January 2022, from <a href="https://www.thingiverse.com/thing:2872280" target="_blank"> https://www.thingiverse.com/thing:2872280</a></li>
+                    <li> What is a Laser Guided Vehicle? LGV Vehicle: Advantages and Disadvantages. (accessed Nov. 12, 2021) <a href="https://www.agvnetwork.com/what-is-a-laser-guided-vehicle-lgv" target="_blank">https://www.agvnetwork.com/what-is-a-laser-guided-vehicle-lgv</a></li>
+                    <li> AGVs: navigation systems. (2020). 
+                        Retrieved 22 January 2022, from <a href="https://jlmartinez-es.medium.com/agvs-navigation-systems-354b3469e6c3" target="_blank">https://jlmartinez-es.medium.com/agvs-navigation-systems-354b3469e6c3</a>
+                    <li> Browne, M. (2021). Walmart goes fully driverless in delivery pilot in Bentonville. Retrieved 22 January 2022, 
+                        from <a href="https://www.supermarketnews.com/technology/walmart-goes-fully-driverless-delivery-pilot-bentonville" target="_blank">https://www.supermarketnews.com/technology/walmart-goes-fully-driverless-delivery-pilot-bentonville</a></li>
+                    <li>ATmega328p Datasheet. Retrieved 22 January 2022, from <a href="https://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-7810-Automotive-Microcontrollers-ATmega328P_Datasheet.pdf" target="_blank">https://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-7810-Automotive-Microcontrollers-ATmega328P_Datasheet.pdf</a></li>
+                    <li>Micro Motor DC 1:48 dois eixos. (2022). Retrieved 22 January 2022, from <a href="https://www.electrofun.pt/robotica/micro-motor-dc-1-48-dois-eixos" target="_blank"> https://www.electrofun.pt/robotica/micro-motor-dc-1-48-dois-eixos</a></li>
+                    <li>L298N Motor Driver Module. (2022). Retrieved 22 January 2022, from <a href="https://components101.com/modules/l293n-motor-driver-module" target="_blank" >https://components101.com/modules/l293n-motor-driver-module</a></li>
+                    <li>Retrieved 22 January 2022, from <a href="https://www.vishay.com/docs/83760/tcrt5000.pdf" target="_blank"> https://www.vishay.com/docs/83760/tcrt5000.pdf</a></li>
+                    <li>Retrieved 22 January 2022, from <a href="http://www.ee.ic.ac.uk/pcheung/teaching/DE1_EE/stores/sg90_datasheet.pdf" target="_blank">http://www.ee.ic.ac.uk/pcheung/teaching/DE1_EE/stores/sg90_datasheet.pdf</a></li>
+                    <li>Retrieved 22 January 2022, from <a href="https://www.ti.com/lit/ds/symlink/ina129.pdf?ts=1642863988852&ref_url=https%253A%252F%252Fwww.google.com%252F" target="_blank">https://www.ti.com/lit/ds/symlink/ina129.pdf?ts=1642863988852&ref_url=https%253A%252F%252Fwww.google.com%252F</a> </li>
+                    <li>1972. Retrieved 22 January 2022, from <a href="https://www.sparkfun.com/datasheets/Components/LM7805.pdf" target="_blank"> https://www.sparkfun.com/datasheets/Components/LM7805.pdf</a></li>
+                    
+                </ol>
+
+                 <br>
+                 <br>
+                 <br>
+                 <br>
+                 <br>
+                 <br>
+                 <br>
+                 <br>
+                    </section>
+    <!-- =============== Contact =============== -->
+    <!-- Footer -->
+    <footer id="footer">
+	<!-- =============== container =============== -->
+    <div class="container">
+			    <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12">
+ 
+
+                    <p class="copyright">
+                        &copy; 2016 Canvas - Template adaptado por Diogo Moreira (1190528) e Rui Teixeira (1191039)
+					</p>
+
+				</div>
+			</div>
+    </div><!-- =============== container end =============== -->
+	</footer>
+    <!-- =============== jQuery =============== -->
+    <script src="js/jquery.js"></script>
+    <!-- =============== Bootstrap Core JavaScript =============== -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- =============== Plugin JavaScript =============== -->
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/jquery.fittext.js"></script>
+    <script src="js/wow.min.js"></script>
+    <!-- =============== Custom Theme JavaScript =============== -->
+    <script src="js/creative.js"></script>
+    <!-- =============== owl carousel =============== -->
+    <script src="owl-carousel/owl.carousel.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#owl-demo").owlCarousel({
+                autoPlay: 3000,
+                items: 3,
+                itemsDesktop: [1199, 3],
+                itemsDesktopSmall: [979, 3]
+            });
+
+        });
+    </script>
+</body>
+</html>
