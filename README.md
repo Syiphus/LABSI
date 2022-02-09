@@ -1,4 +1,4 @@
-# LABSI
+# Unidade Curricular LABSI
 
 #### 2/02 - Repositório tornado público com código final
 
