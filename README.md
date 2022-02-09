@@ -1,5 +1,6 @@
 # LABSI
- Projeto minimo para labsi
+
+#### 2/02 - Repositório tornado público com código final
 
 #### 29/10 - Comentários iniciais adicionados, a completar
 #### 24/10 - Motor a funcionar em PINB2 e potenciometro a funcionar em ADC0
